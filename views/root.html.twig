@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Contact Book</title>
+  </head>
+  <body>
+    <form class="" action="/" method="post">
+      <input type="text" name="first_name" value="">
+      <input type="text" name="last_name" value="">
+      <input type="text" name="address" value="">
+      <input type="text" name="phone_number" value="">
+      <button type="submit" name="button">Add Contact</button>
+    </form>
+    <p>
+    {% for contact in list_of_contacts %}
+      {{contact.get_name}}
+      {{contact.get_address}}
+      {{contact.get_phone_number}}
+    {% endfor %}
+    </p>
+  </body>
+</html>
