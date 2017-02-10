@@ -32,6 +32,14 @@
     function get_phone_number() {
       return $this->phone_number;
     }
+
+    static function getAll() {
+      return $_SESSION['list_of_contacts'];
+    }
+
+    static function clearAll() {
+      $_SESSION['list_of_contacts'] = array();
+    }
   }
 
  ?>

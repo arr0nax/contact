@@ -16,12 +16,12 @@ $app->get('/', function() use ($app) {
 
 $app->post('/new_contact', function() use ($app) {
   array_push($_SESSION['list_of_contacts'], new Contact($_POST['first_name'], $_POST['last_name'],$_POST['address'],$_POST['phone_number']));
-  return $app['twig']->render('/root.html.twig', array('list_of_contacts'=>$_SESSION['list_of_contacts']));
+  return $app['twig']->render('/root.html.twig', array('list_of_contacts'=>Contact::getAll()));
 });
 
 $app->post('/clear_list', function() use ($app) {
-  $_SESSION['list_of_contacts'] = array();
-  return $app['twig']->render('/root.html.twig', array('list_of_contacts'=>$_SESSION['list_of_contacts']));
+  Contact::clearAll();
+  return $app['twig']->render('/root.html.twig', array('list_of_contacts'=>Contact::getAll()));
 });
 
 $app->post('/select_contact', function() use ($app) {
