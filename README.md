@@ -1,12 +1,12 @@
-# _{Address Book}_
+# _Address Book_
 
-#### _{A Place to Store Contacts, 10 February, 2017}_
+#### _A Place to Store Contacts, 10 February, 2017_
 
-#### By _{**Clayton Collins**}_
+#### By _**Clayton Collins**_
 
 ## Description
 
-_{This application can take and store contact information. Every contact is created as a new Contact object, and is stored in a session array called 'list_of_contacts'. Contacts are accessed using a getAll() function for displaying, and using their array index in 'list_of_contacts' for individual editing and deleting. To access and edit a contact, simply click on it and a form will appear giving you the option to replace information or delete the contact entirely.}_
+_This application can take and store contact information. Every contact is created as a new Contact object, and is stored in a session array called 'list_of_contacts'. Contacts are accessed using a getAll() function for displaying, and using their array index in 'list_of_contacts' for individual editing and deleting. To access and edit a contact, simply click on it and a form will appear giving you the option to replace information or delete the contact entirely._
 
 ## Setup/Installation Requirements
 
@@ -17,18 +17,18 @@ _{This application can take and store contact information. Every contact is crea
 
 ## Known Bugs
 
-_{As of the last commit, there are no bugs the developer is aware of}_
+_As of the last commit, there are no bugs the developer is aware of_
 
 ## Support and contact details
 
-_{If you run into any issues or have questions, ideas or concerns, contact me at claytonccollins@gmail.com.}_
+_If you run into any issues or have questions, ideas or concerns, contact me at claytonccollins@gmail.com._
 
 ## Technologies Used
 
-_{Created using php, css, javascript, html, bootstrap, jquery, twig, and silex}_
+_Created using php, css, javascript, html, bootstrap, jquery, twig, and silex_
 
 ### License
 
-*{This software is licensed under the MIT license}*
+*This software is licensed under the MIT license*
 
-Copyright (c) 2016 **_{Clayton C. Collins}_**
+Copyright (c) 2016 **_Clayton C. Collins_**
