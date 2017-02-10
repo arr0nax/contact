@@ -1,1 +1,22 @@
 
+ul {
+  list-style: none;
+}
+
+#contacts {
+  margin-bottom: 2px;
+}
+
+.contact {
+  margin-top: 1vh;
+}
+
+h3 {
+  font-style: italic;
+  margin-left: 3vw;
+  margin-top: 0;
+}
+form {
+margin-left: 3vw;
+margin-top: 1vh;
+}

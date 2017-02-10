@@ -10,15 +10,16 @@
   <script src="scripts.js" type="text/javascript"></script>
   <body>
     <div class="col-sm-6">
-
+      <h2 id="contacts">Contacts</h2>
+      <h3>click to edit</h3>
       <p>
         {% set i = 0 %}
         {% for contact in list_of_contacts %}
         <ul class="contact" id="{{i}}">
           {{contact.get_name}}
           <ul>
-            <li>{{contact.get_address}}</li>
-            <li>{{contact.get_phone_number}}</li>
+            <li>address: {{contact.get_address}}</li>
+            <li>phone number: {{contact.get_phone_number}}</li>
             {% set i = i + 1 %}
           </ul>
         </ul>
@@ -33,7 +34,7 @@
       </div>
     </div>
     <div class="col-sm-6">
-
+      <h2>Add New Contact</h2>
     <form class="" action="/new_contact" method="post">
       <div class="form-group">
 
