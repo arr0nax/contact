@@ -24,6 +24,16 @@ $app->post('/clear_list', function() use ($app) {
   return $app['twig']->render('/root.html.twig', array('list_of_contacts'=>$_SESSION['list_of_contacts']));
 });
 
+$app->post('/select_contact', function() use ($app) {
+  $clicked = $_POST['clicked'];
+  return $app['twig']->render('/contact.html.twig', array('id'=>$clicked));
+});
+
+$app->post('/edit_contact', function() use ($app) {
+  $_SESSION['list_of_contacts'][$_POST['id']] = new Contact($_POST['first_name'], $_POST['last_name'],$_POST['address'],$_POST['phone_number']);
+  return $app['twig']->render('/root.html.twig', array('list_of_contacts'=>$_SESSION['list_of_contacts']));
+});
+
 return $app;
 
 
