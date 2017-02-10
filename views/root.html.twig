@@ -5,7 +5,7 @@
     <title>Contact Book</title>
   </head>
   <body>
-    <form class="" action="/" method="post">
+    <form class="" action="/new_contact" method="post">
       <input type="text" name="first_name" value="">
       <input type="text" name="last_name" value="">
       <input type="text" name="address" value="">
@@ -14,10 +14,17 @@
     </form>
     <p>
     {% for contact in list_of_contacts %}
+    <ul>
       {{contact.get_name}}
-      {{contact.get_address}}
-      {{contact.get_phone_number}}
+      <ul>
+      <li>{{contact.get_address}}</li>
+      <li>{{contact.get_phone_number}}</li>
+      </ul>
+    </ul>
     {% endfor %}
     </p>
+    <form class="" action="/clear_list" method="post">
+      <button type="submit" name="button">Clear all contacts</button>
+    </form>
   </body>
 </html>
