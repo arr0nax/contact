@@ -26,11 +26,19 @@ $app->post('/clear_list', function() use ($app) {
 
 $app->post('/select_contact', function() use ($app) {
   $clicked = $_POST['clicked'];
-  return $app['twig']->render('/contact.html.twig', array('id'=>$clicked));
+  $_SESSION['list_of_contacts']=array_values($_SESSION['list_of_contacts']);
+  return $app['twig']->render('/contact.html.twig', array('id'=>$clicked,'first_name'=>$_SESSION['list_of_contacts'][$clicked]->get_first_name(),'last_name'=>$_SESSION['list_of_contacts'][$clicked]->get_last_name(),'phone_number'=>$_SESSION['list_of_contacts'][$clicked]->get_phone_number(),'address'=>$_SESSION['list_of_contacts'][$clicked]->get_address()));
 });
 
 $app->post('/edit_contact', function() use ($app) {
+  $_SESSION['list_of_contacts']=array_values($_SESSION['list_of_contacts']);
   $_SESSION['list_of_contacts'][$_POST['id']] = new Contact($_POST['first_name'], $_POST['last_name'],$_POST['address'],$_POST['phone_number']);
+  return $app['twig']->render('/root.html.twig', array('list_of_contacts'=>$_SESSION['list_of_contacts']));
+});
+
+$app->post('/delete_contact', function() use ($app) {
+  $_SESSION['list_of_contacts']=array_values($_SESSION['list_of_contacts']);
+  unset($_SESSION['list_of_contacts'][$_POST['id']]);
   return $app['twig']->render('/root.html.twig', array('list_of_contacts'=>$_SESSION['list_of_contacts']));
 });
 

@@ -2,26 +2,33 @@
   <div class="form-group">
 
   <label for="first_name">first name:</label>
-  <input type="text" name="first_name" value="">
+  <input type="text" name="first_name" value="{{first_name}}">
 </div>
 <div class="form-group">
 
   <label for="last_name">last name:</label>
-  <input type="text" name="last_name" value="">
+  <input type="text" name="last_name" value="{{last_name}}">
 </div>
 <div class="form-group">
 
   <label for="address">address:</label>
-  <input type="text" name="address" value="">
+  <input type="text" name="address" value="{{address}}">
 </div>
 <div class="form-group">
 
   <label for="phone_number">phone number:</label>
-  <input type="text" name="phone_number" value="">
+  <input type="text" name="phone_number" value="{{phone_number}}">
 </div>
 <div style="display:none;">
   <input type="text" name="id" value="{{id}}"
-  </div>
+  </input>
 </div>
   <button type="submit" name="button">Edit Contact</button>
 </form>
+<form class="delete_contact" action="/delete_contact" method="post">
+<div style="display:none;">
+  <input type="text" name="id" value="{{id}}"
+  </input>
+</div>
+  <button type="submit" name="button">Delete Contact</button>
+<div>
