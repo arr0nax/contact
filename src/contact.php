@@ -33,6 +33,27 @@
       return $this->phone_number;
     }
 
+    function set_first_name($first) {
+        $this->first_name = $first;
+    }
+
+    function set_last_name($last) {
+        $this->last_name = $last;
+    }
+
+    function set_address($address) {
+        $this->address = $address;
+    }
+
+    function set_phone_number($phone_number) {
+        $this->phone_number = $phone_number;
+    }
+
+    static function saveContact($first,$last,$address,$number) {
+        $newContact = new Contact($first,$last,$address,$number);
+        array_push($_SESSION['list_of_contacts'], $newContact);
+    }
+
     static function getAll() {
       return $_SESSION['list_of_contacts'];
     }

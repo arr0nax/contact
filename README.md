@@ -11,6 +11,7 @@ _This application can take and store contact information. Every contact is creat
 ## Setup/Installation Requirements
 
 * _Clone this repository_
+*_In the top level of this project directory (/contact/), install composer. (instructions here: https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx, but for macs simply run "composer install" in terminal)
 * _Begin a server in the web directory using the command "php -S localhost:8000" in mac terminal_
 * _In your web browser, navigate to "localhost:8000/"_
 * _use the 'add contact' form to create new contacts. Clear all your contacts at any time using clear all and edit contacts by clicking on them._
